@@ -1,0 +1,22 @@
+{
+  "name": "pivanov/scrape-presentation",
+  "description": "Scrape PowerPoint and PDF presentation",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Petr Ivanov",
+      "email": "petr.yrs@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.2|^8.0",
+    "spatie/pdf-to-image": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "scraper\\": "src"
+    }
+  }
+}
