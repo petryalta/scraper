@@ -12,7 +12,8 @@
   ],
   "require": {
     "php": "^7.2|^8.0",
-    "spatie/pdf-to-image": "^2.1"
+    "spatie/pdf-to-image": "^2.1",
+    "ncjoes/office-converter": "^1.0"
   },
   "autoload": {
     "psr-4": {

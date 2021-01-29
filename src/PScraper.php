@@ -11,6 +11,7 @@ namespace scraper;
 
 use scraper\exceptions\UnsupportedException;
 use scraper\scrapers\ScrapePDF;
+use scraper\scrapers\ScrapePPT;
 
 class PScraper
 {
@@ -33,7 +34,6 @@ class PScraper
 
     public function __construct($inFile, $outPath)
     {
-            echo "Constructor ! \n";
             if (!file_exists($inFile)) {
                 throw new \Exception("$inFile file not found");
             }
@@ -78,12 +78,15 @@ class PScraper
 
         switch ($fileType) {
             case self::FTYPE_PDF:
-                $scrape = (new ScrapePDF())->scrape($this->fileName, $this->outputPath);
+                $scrape= new ScrapePDF();
                 break;
             case self::FTYPE_PPT:
+                $scrape = new ScrapePPT();
                 break;
             default:
                 throw new UnsupportedException('Unsupported file format');
         }
+
+        $scrape->scrape($this->fileName, $this->outputPath);
     }
 }
