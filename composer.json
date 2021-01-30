@@ -1,5 +1,5 @@
 {
-  "name": "pivanov/scrape-presentation",
+  "name": "scraper/scraper",
   "description": "Scrape PowerPoint and PDF presentation",
   "minimum-stability": "stable",
   "license": "proprietary",
